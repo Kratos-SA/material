@@ -373,6 +373,7 @@ function ThemingProvider($mdColorPalette) {
     return applyTheme;
 
     function registered(themeName) {
+         applyTheme.THEMES = angular.extend({}, THEMES);
       if (themeName === undefined || themeName === '') return true;
       return applyTheme.THEMES[themeName] !== undefined;
     }
